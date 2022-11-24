@@ -1,6 +1,11 @@
-﻿string [] FillingStringArray (string sizeArray)
+﻿Console.WriteLine("Задача: \n  Написать программу, которая из имеющегося массива строк \n" +  
+                   "формирует новый массив из строк, длина которых меньше, либо равна 3 символам.");
+
+Console.WriteLine("");
+
+string [] FillingStringArray (string sizeArray)
 {
-    string userText = "";
+    
      int convertSizeArray = Convert.ToInt32(sizeArray);
       
      string [] stringArray = new string [convertSizeArray];
@@ -9,8 +14,8 @@
        {
         
            Console.Write("Введите слово ");
-           userText =  Convert.ToString(Console.ReadLine());
-           stringArray[i] = userText;
+           
+           stringArray[i] = Convert.ToString(Console.ReadLine());
         
        }
      
@@ -20,16 +25,29 @@
 
 void ShowStringArray(string[] stringArray)
      {
+        int count=0;
+
         for(int i=0; i < stringArray.Length ; i++)
-       {
-          Console.Write(stringArray[i]);
-       }
+        {  
+            if (stringArray[i].Length <= 3)
+                 {                  
+                  Console.Write(stringArray[i] + "; ");                  
+                  count++;
+                 }   
+
+       }         
+
+            if (count == 0)
+            {
+                Console.Write("в массиве нет строк, чья длина был бы меньше или равна трём символам");                  
+            }        
 
 }
 
-
 Console.Write("Введите размер массива ");
+Console.Write("");
 string sizeArray = Convert.ToString(Console.ReadLine());
-// FillingStringArray(sizeArray);
 string [] fillingArray =  FillingStringArray (sizeArray);
+Console.Write("[ ");
 ShowStringArray(fillingArray);
+Console.Write("]");
