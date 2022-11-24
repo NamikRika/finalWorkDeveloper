@@ -1,4 +1,4 @@
-﻿// Console.WriteLine("Задача: \n  Написать программу, которая из имеющегося массива строк \n" +  
+Console.WriteLine("Задача: \n  Написать программу, которая из имеющегося массива строк \n" +  
 //                    "формирует новый массив из строк, длина которых меньше, либо равна 3 символам.");
 
 // Console.WriteLine("");
@@ -25,13 +25,14 @@
 
 // void ShowStringArray(string[] stringArray)
 //      {
+//         string [] NewstringArray = new string [stringArray.Length];
 //         int count=0;
 
 //         for(int i=0; i < stringArray.Length ; i++)
 //         {  
 //             if (stringArray[i].Length <= 3)
 //                  {                  
-//                   Console.Write(stringArray[i] + "; ");                  
+//                   NewstringArray[i] = stringArray[i];                  
 //                   count++;
 //                  }   
 
@@ -40,6 +41,11 @@
 //             if (count == 0)
 //             {
 //                 Console.Write("в массиве нет строк, чья длина был бы меньше или равна трём символам");                  
+//             }
+//             else
+//             {
+//                 for(int i=0; i < NewstringArray.Length ; i++)
+//                 Console.Write(NewstringArray[i] + "; ");                
 //             }        
 
 // }
