@@ -18,6 +18,18 @@
     
 }
 
+void ShowStringArray(string[] stringArray)
+     {
+        for(int i=0; i < stringArray.Length ; i++)
+       {
+          Console.Write(stringArray[i]);
+       }
+
+}
+
+
 Console.Write("Введите размер массива ");
 string sizeArray = Convert.ToString(Console.ReadLine());
-FillingStringArray(sizeArray);
+// FillingStringArray(sizeArray);
+string [] fillingArray =  FillingStringArray (sizeArray);
+ShowStringArray(fillingArray);
